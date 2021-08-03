@@ -21,7 +21,7 @@ fmt:
 	@git diff --exit-code .
 
 build: mod
-	$(GOBUILD) -o ./bin/fwmark-exporter cmd/go-tpc/fwmark-exporter
+	$(GOBUILD) -o ./bin/fwmark-exporter main.go
 
 vet:
 	go vet ./...
