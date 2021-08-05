@@ -1,4 +1,4 @@
-module github.com/yeya24/fwmark-exporter
+module code.byted.org/bge-infra/fwmark-exporter
 
 go 1.16
 
