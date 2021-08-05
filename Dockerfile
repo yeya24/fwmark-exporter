@@ -13,7 +13,6 @@ COPY . .
 # Build
 RUN GOOS=linux GOARCH=amd64 make build
 
-
 FROM debian:buster-slim
 
 RUN apt-get update && apt-get install -y iptables && rm -rf /var/lib/apt/lists/*
@@ -22,4 +21,4 @@ RUN update-alternatives --set iptables /usr/sbin/iptables-legacy
 
 COPY --from=builder /workspace/bin/fwmark-exporter /fwmark-exporter
 
-CMD ["/fwmark-exporter"]
+ENTRYPOINT ["/fwmark-exporter"]

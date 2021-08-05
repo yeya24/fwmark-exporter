@@ -12,7 +12,7 @@ LDFLAGS += -X "main.date=$(shell date -u '+%Y-%m-%d %I:%M:%S')"
 GOBUILD=$(GO) build -ldflags '$(LDFLAGS)'
 
 APP			:= fwmark-exporter
-VERSION		:= 0.1
+VERSION		:= 0.2
 
 REGISTRY			:= docker-us.byted.org/cdn/
 IMAGE				= $(APP):$(VERSION)
